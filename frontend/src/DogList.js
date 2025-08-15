@@ -9,7 +9,7 @@ const DogList = () => {
 
   // Fetch all dog data from backend
   useEffect(() => {
-    axios.get('http://localhost:5000/api/dogs')
+    axios.get('https://pawriwar-backend.onrender.com/api/dogs')
       .then((response) => setDogs(response.data))
       .catch((error) => console.error('Error fetching dogs:', error));
   }, []);
@@ -19,7 +19,7 @@ const DogList = () => {
       {dogs.map((dog) => (
         <div className="dog-card" key={dog._id}>
           <img
-            src={dog.image}
+            src={`https://pawriwar-backend.onrender.com/${dog.image}`}
             alt={dog.name}
             className="dog-image"
             onError={(e) => {
@@ -50,3 +50,4 @@ const DogList = () => {
 };
 
 export default DogList;
+
