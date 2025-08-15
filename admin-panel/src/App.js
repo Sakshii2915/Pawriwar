@@ -6,17 +6,16 @@ function App() {
   const [adoptions, setAdoptions] = useState([]);
 
   useEffect(() => {
-  const fetchAdoptions = async () => {
-    try {
-      const res = await axios.get('https://pawriwar-backend.onrender.com/api/adoptions');
-      setAdoptions(res.data);
-    } catch (err) {
-      console.error('Error fetching adoptions:', err.message);
-    }
-  };
-
-  fetchAdoptions();
-}, []);
+    const fetchAdoptions = async () => {
+      try {
+        const res = await axios.get(
+          'https://pawriwar-backend.onrender.com/api/adoptions'
+        );
+        setAdoptions(res.data);
+      } catch (err) {
+        console.error('Error fetching adoptions:', err.message);
+      }
+    };
 
     fetchAdoptions();
   }, []);
@@ -30,16 +29,21 @@ function App() {
         adoptions.map((item) => (
           <div className="adoption-card" key={item._id}>
             <h3>{item.adopterName}</h3>
-            <p><strong>Contact:</strong> {item.contact}</p>
-            <p><strong>Reason:</strong> {item.reason}</p>
-            <p><strong>Dog:</strong> {item.dogId?.name || 'Unknown'}</p>
+            <p>
+              <strong>Contact:</strong> {item.contact}
+            </p>
+            <p>
+              <strong>Reason:</strong> {item.reason}
+            </p>
+            <p>
+              <strong>Dog:</strong> {item.dogId?.name || 'Unknown'}
+            </p>
             {item.dogId?.image && (
               <img
-                  src={`https://pawriwar-backend.onrender.com/${item.dogId.image}`}
-                  alt={item.dogId?.name}
-                  style={{ width: "200px", height: "auto" }}
+                src={`https://pawriwar-backend.onrender.com/${item.dogId.image}`}
+                alt={item.dogId?.name}
+                style={{ width: '200px', height: 'auto' }}
               />
-
             )}
           </div>
         ))
@@ -49,3 +53,4 @@ function App() {
 }
 
 export default App;
+
