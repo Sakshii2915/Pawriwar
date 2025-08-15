@@ -18,11 +18,11 @@ function App() {
 
       {/* Page Routing */}
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/donate" element={<DonatePage />} />
-        <Route path="/donate" element={<Donate />} />
+  <Route path="/" element={<HomePage />} />          // Homepage
+  <Route path="/donate" element={<DonatePage />} />   // Full donate page
+  <Route path="/donate-now" element={<Donate />} />   // Direct access to Donate component
+</Routes>
 
-      </Routes>
     </Router>
   );
 }
