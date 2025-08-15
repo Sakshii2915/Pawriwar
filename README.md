@@ -43,5 +43,5 @@ The platform connects adopters with shelter dogs, provides a chatbot for pet car
 
 ---
 
-## 📂 Project Structure
+
 
