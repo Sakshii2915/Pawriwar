@@ -12,8 +12,17 @@ dotenv.config();
 const connectDB = require('./db');
 connectDB();
 
+// ✅ Secure CORS — allow only your frontend + admin panel
+app.use(cors({
+  origin: [
+    'https://pawriwar-frontend.onrender.com',
+    'https://pawriwar-admin-panel.onrender.com'
+  ],
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true
+}));
+
 // Middleware
-app.use(cors());
 app.use(express.json());
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
@@ -36,4 +45,5 @@ app.get('/', (req, res) => {
 // Start server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
 
