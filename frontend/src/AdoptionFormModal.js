@@ -12,7 +12,7 @@ const AdoptionFormModal = ({ dog, onClose }) => {
   e.preventDefault();
 
   try {
-    const response = await axios.post('https://pawriwar-backend.onrender.com', {
+    const response = await axios.post('https://pawriwar-backend.onrender.com/api/adoptions', {
   adopterName,
   contact,
   reason,
