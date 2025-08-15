@@ -1,0 +1,58 @@
+.donate-page {
+  max-width: 500px;
+  margin: 60px auto;
+  padding: 20px;
+  text-align: center;
+  background: #fdfdfd;
+  border-radius: 15px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+.donation-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.donation-form input,
+.donation-form select,
+.donation-form textarea {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.donation-form button {
+  padding: 12px;
+  background: #a349a4;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.donation-form button:hover {
+  background: #822b82;
+}
+
+.success-message {
+  margin-top: 20px;
+  color: green;
+  font-weight: bold;
+}
+.navbar a {
+  font-size: 1.2rem; /* Make text bigger */
+  font-weight: bold; /* Make it thicker */
+  padding: 12px 20px;
+  color: #333; /* Or white if your navbar is dark */
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  color: #7d00ff; /* A nice highlight on hover */
+  transform: scale(1.1); /* Slight zoom */
+}

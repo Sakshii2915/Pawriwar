@@ -1,0 +1,15 @@
+.admin-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.adoption-card {
+  border: 1px solid #ccc;
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  background-color: #fefefe;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
