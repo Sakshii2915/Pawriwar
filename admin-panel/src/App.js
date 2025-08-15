@@ -32,7 +32,7 @@ function App() {
             <p><strong>Dog:</strong> {item.dogId?.name || 'Unknown'}</p>
             {item.dogId?.image && (
               <img
-                src={`http://localhost:5000/uploads/${item.dogId.image}`}
+                src={`https://pawriwar-backend.onrender.com/${item.dogId.image}`}
                 alt={item.dogId?.name}
                 style={{ width: "200px", height: "auto" }}
               />
