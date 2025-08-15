@@ -19,7 +19,7 @@ const Donate = () => {
       };
 
       const { data } = await axios.post(
-        "https://pawriwar-backend.onrender.com", // ✅ Use full URL if no proxy
+        "https://pawriwar-backend.onrender.com/api/payment", // ✅ Use full URL if no proxy
         donationDetails
       );
 
