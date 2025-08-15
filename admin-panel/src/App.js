@@ -6,14 +6,17 @@ function App() {
   const [adoptions, setAdoptions] = useState([]);
 
   useEffect(() => {
-    const fetchAdoptions = async () => {
-      try {
-        const res = await axios.get('https://pawriwar-backend.onrender.com/api/adoptions');
-        setAdoptions(res.data);
-      } catch (err) {
-        console.error('Error fetching adoptions:', err.message);
-      }
-    };
+  const fetchAdoptions = async () => {
+    try {
+      const res = await axios.get('https://pawriwar-backend.onrender.com/api/adoptions');
+      setAdoptions(res.data);
+    } catch (err) {
+      console.error('Error fetching adoptions:', err.message);
+    }
+  };
+
+  fetchAdoptions();
+}, []);
 
     fetchAdoptions();
   }, []);
@@ -32,10 +35,11 @@ function App() {
             <p><strong>Dog:</strong> {item.dogId?.name || 'Unknown'}</p>
             {item.dogId?.image && (
               <img
-                src={`https://pawriwar-backend.onrender.com/uploads/${item.dogId.image}`}
-                alt={item.dogId?.name}
-                style={{ width: "200px", height: "auto" }}
+                  src={`https://pawriwar-backend.onrender.com/${item.dogId.image}`}
+                  alt={item.dogId?.name}
+                  style={{ width: "200px", height: "auto" }}
               />
+
             )}
           </div>
         ))
