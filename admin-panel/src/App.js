@@ -8,7 +8,7 @@ function App() {
   useEffect(() => {
     const fetchAdoptions = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/adoptions');
+        const res = await axios.get('https://pawriwar-backend.onrender.com');
         setAdoptions(res.data);
       } catch (err) {
         console.error('Error fetching adoptions:', err.message);
